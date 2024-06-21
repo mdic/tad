@@ -154,7 +154,15 @@
     "linux": {
       "target": [
         "deb",
-        "rpm",
+        {
+          "target": "rpm",
+          "depends": [
+            "libnotify",
+            "libappindicator",
+            "libXScrnSaver",
+            "libuuid or libuuid1"
+          ]
+        },
         "tar.bz2"
       ]
     },
